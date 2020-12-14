@@ -11,11 +11,15 @@
 <?php 
     $text = 'Benvenuti nel mondo di PHP';
     $text_lenght = strlen($text);
+    $badword = $_GET['badword'];
+    $replaced = str_replace($badword, '***', $text);
 ?>
 
-<h2> <?php echo $text ?> </h2>
+<h2> <?php echo $replaced ?> </h2>
 
 <h3> La scritta qui sopra ha <?php echo $text_lenght ?> caratteri</h3>
+
+
 
 </body>
 </html>
