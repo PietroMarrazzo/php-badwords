@@ -9,10 +9,15 @@
     
 
 <?php 
+
     $text = 'Benvenuti nel mondo di PHP';
     $text_lenght = strlen($text);
     $badword = $_GET['badword'];
     $replaced = str_replace($badword, '***', $text);
+
+    if(($badword == undefined)) {
+        echo 'Inserire un valore valido';
+    }
 ?>
 
 <h2> <?php echo $replaced ?> </h2>
